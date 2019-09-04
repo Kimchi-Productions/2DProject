@@ -23,5 +23,12 @@ public class PlayerAttack : MonoBehaviour
             }
             ++i;
         }
+
+        #if UNITY_EDITOR
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Instantiate(Rocket, this.transform.position, Quaternion.identity);
+            }
+        #endif
     }
 }

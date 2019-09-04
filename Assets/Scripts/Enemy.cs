@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public float speed = 30.0f;
     private Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -20,9 +19,8 @@ public class Enemy : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
