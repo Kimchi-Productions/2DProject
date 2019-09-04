@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 77709361}
   - component: {fileID: 77709363}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Background-wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 92749425}
   - component: {fileID: 92749426}
   m_Layer: 0
-  m_Name: characters_23
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1004196475}
   - component: {fileID: 1004196476}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
