@@ -6,24 +6,26 @@ public class PlayerController : MonoBehaviour
 {
     public float jetpackForce = 75.0f;
     private Rigidbody2D playerRigidbody;
+    private float ScreenWidth;
+
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        ScreenWidth = Screen.width;
+
     }
 
     void FixedUpdate()
     {
-        bool jetpackActive = Input.GetButton("Fire1");
-        if (jetpackActive)
+        int i = 0;
+        while (i < Input.touchCount)
         {
-            playerRigidbody.AddForce(new Vector2(0, jetpackForce));
+            if (Input.GetTouch(i).position.x < ScreenWidth / 2)
+            {
+                playerRigidbody.AddForce(new Vector2(0, jetpackForce));
+            }
+            ++i;
         }
-    }
-
-
-    void Update()
-    {
-
     }
 }
