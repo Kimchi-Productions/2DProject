@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HitDetection : MonoBehaviour
 {
 
     public GameObject Rocket;
     public GameObject Player;
+
+    public Score score;
+
+    static public float passScore;
 
     void Start()
     {
@@ -27,6 +32,9 @@ public class HitDetection : MonoBehaviour
             Destroy(this.gameObject);
             Destroy(other.gameObject);
             Debug.Log("GAME OVER");
+            Score.stopScoreCount();
+            passScore = Score.saveScore;
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 

@@ -7,8 +7,11 @@ public class Score : MonoBehaviour
 {
 
     public Text scoreText;
-    public float scoreAmount;
+    static public float scoreAmount;
     public float counter;
+    static public float saveScore;
+
+    public HitDetection hitDetection;
 
     // Start is called before the first frame update
     void Start()
@@ -23,4 +26,10 @@ public class Score : MonoBehaviour
         scoreText.text = "Score: " + (int)scoreAmount;
         scoreAmount += counter * Time.deltaTime;
     }
+
+    static public void stopScoreCount(){
+        saveScore = scoreAmount;
+        Debug.Log("Your score is: " + (int)saveScore);
+    }
+
 }
