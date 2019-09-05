@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 999884785010601873}
   - component: {fileID: 999884785010601874}
   - component: {fileID: 999884785010601875}
+  - component: {fileID: 6344954892462250647}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,3 +158,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jetpackForce: 75
+--- !u!114 &6344954892462250647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999884785010601869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d14550a62d1431cbf4c98fbfbe9e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefab: {fileID: 7778368486668532760, guid: 14890741de1e840f0b386508be4e6b4f,
+    type: 3}
+  respawnTime: 0.8
+  difficultyIncrease: 0.00001
+  enemySpawnOffset: 1
