@@ -13,6 +13,8 @@ public class Score : MonoBehaviour
 
     public HitDetection hitDetection;
 
+    public float tutorialLength = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,12 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score: " + (int)scoreAmount;
-        scoreAmount += counter * Time.deltaTime;
+        tutorialLength -= Time.deltaTime;
+
+        if(tutorialLength < 0){
+            scoreText.text = "Score: " + (int)scoreAmount;
+            scoreAmount += counter * Time.deltaTime;
+        }
     }
 
     static public void stopScoreCount(){
